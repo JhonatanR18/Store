@@ -13,10 +13,10 @@ function printDetails(id){
     const detailsTemplate = `
     <div class="product-images-block">
         <div class="thumbnail-container">
-            <img src="${product.photo[1]}" alt="${product.id}">
             <img src="${product.photo[2]}" alt="${product.id}">
+            <img src="${product.photo[3]}" alt="${product.id}">
         </div>
-        <img class="main-img" src="${product.photo[0]}" alt="${product.id}">
+        <img class="main-img" src="${product.photo[1]}" alt="${product.id}">
     </div>
     <div class="product-description-block">
         <h1 class="titulo">${product.title}</h1>

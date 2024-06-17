@@ -8,10 +8,10 @@ const navSelector = document.getElementById("navbar");
 // navSelector.style.padding = "20px 0"
 // Crea una variable options, para guardar un array de objetos. Cada objeto representará los datos de un botón con las propiedades:
 const optionsNav = [
-    {title: "Ofertas de la semana!", linkTo: "html/details.html"}, // title: para el texto del botón
-    {title: "Productos", linkTo: "html/details.html"}, // linkTo: para el link de direccionamiento
-    {title: "Contacto", linkTo: "html/details.html"},
-    {title: "Marcas", linkTo: "html/details.html"}
+    {title: "Ofertas de la semana!", linkTo: "../html/details.html"}, // title: para el texto del botón
+    {title: "Productos", linkTo: "../html/details.html"}, // linkTo: para el link de direccionamiento
+    {title: "Contacto", linkTo: "../html/details.html"},
+    {title: "Marcas", linkTo: "../html/details.html"}
 ]
 // Itera con for of
 for ( let optionNav of optionsNav){
