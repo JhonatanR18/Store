@@ -444,6 +444,10 @@ footer .footer-container{
     text-align: center;
     font-size: 18px;
   }
+  .product-description-block span{
+    display: flex;
+    justify-content: center;
+  }
   .product-description-block .description p{
     text-align: justify;
     font-size: 12px;
