@@ -42,11 +42,11 @@ function printDetails(id){
             <p class="checkout-description">Incluye impuesto PAÍS y percepción AFIP. Podes recuperar AR$ 50711 haciendo la solicitud en AFIP.</p>
             <ul class="checkout-policy-list">
                 <li>
-                <span class="policy-icon"><img src="../assets/truck.png" alt="truck"></span>
+                <span class="policy-icon"><img src="./assets/truck.png" alt="truck"></span>
                 <span class="policy-desc">Agrega el producto al carrito para conocer los costos de envío.</span>
                 </li>
                 <li>
-                <span class="policy-icon"><img src="../assets/plane.png" alt="plane"></span>
+                <span class="policy-icon"><img src="./assets/plane.png" alt="plane"></span>
                 <span class="policy-desc">Recibe aproximadamente en 10 y 15 días hábiles, seleccionando envío normal.</span>
                 </li>
             </ul>
