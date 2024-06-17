@@ -105,7 +105,7 @@ const prod6 = new Product( // sexto elemento del array
     250,
     220,
     50,
-    ['../assets/products/mouse.png', '../assets/products/mouse3.png', '../assets/products/mouse6.png'],
+    ['../assets/products/mouse.png', '../assets/products/mouse3.png', '../assets/products/mouse5.png'],
     ['Black', 'Red'],
     '-12%',
     'Mouse inalámbrico',
