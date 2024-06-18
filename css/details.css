@@ -106,7 +106,7 @@ main .columns-container{
   margin-top: 0px;
   margin-bottom: 10px;
   color: #333;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   word-wrap: break-word;
 }
@@ -134,14 +134,15 @@ main .columns-container{
   outline: none;
 }
 .product-description-block .description h1{
-  color: #000000;
+  color: #333;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 .product-description-block .description p{
   margin-top: 0px;
   color: #646464;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: lighter;
   word-wrap: break-word;
   text-align: justify;
@@ -186,11 +187,13 @@ main .columns-container{
   color: #7525A7;
 }
 .checkout-total-price{
+  color: #7525A7;
   font-size: 28px; /* Tamaño grande para el precio */
   font-weight: 700; /* Fuente en negrita */
   margin-top: 10px; /* Espacio por encima del precio */
 }
 .checkout-description{
+  color: #333;
   line-height: 20.4px; /* Espaciado de línea para mejorar la legibilidad */
   word-wrap: break-word; /* Asegura que el texto no desborde el contenedor */
 }

@@ -1,9 +1,18 @@
 // Actividad: función que “encapsule” todo lo desarrollado en la actividad anterior.
 // const productSelector = document.getElementById("products");
 // Función createCard, recibe parámetro un objeto y devuelve un template string con sólo una tarjeta de producto. El objeto a recibir por la función será un producto con todas las propiedades definidas en la clase.
+// Función Formatear Precios
+function formatPrice(precio){
+    return `S/ ${precio.toLocaleString('es-PE',{
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })}`
+}
 function createCard(product) {
     // modifica cada dato estático de la tarjeta
     // Debe tener una consulta o query dinámica con el id del producto. No olvidar los signos ? (pregunta) ni el = (igual)
+    const priceDiscount = formatPrice(product.priceWithDiscount)
+    const priceNormal = formatPrice(product.normalPrice)
     return `
         <article class="product-card">
         <a href="../html/details.html?id=${product.id}">
@@ -12,8 +21,8 @@ function createCard(product) {
                 <span class="product-title">${product.title}</span>
                 <span class="product-description">${product.observation}</span>
                 <div class="product-price-block">
-                    <span class="normal-price">S/ ${product.normalPrice}</span>
-                    <span class="price-with-discount">S/ ${product.priceWithDiscount}</span>
+                    <span class="normal-price">${priceNormal}</span>
+                    <span class="price-with-discount">${priceDiscount}</span>
                 </div>
                 <div class="product-tax-policy">${product.taxPolicy}</div>
             </div>
