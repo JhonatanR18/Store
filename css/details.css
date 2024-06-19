@@ -183,14 +183,29 @@ main .columns-container{
   border-radius: 2px; /*bordes ligeramente redondeados*/
 }
 .checkout-total-label{
-  font-weight: bold;
+  font-weight: 700;
   color: #7525A7;
+  font-size: 14px;
+}
+/*PRECIOS*/
+.checkout-price-block{
+  margin: 8px 0px 0px 0px;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
 }
 .checkout-total-price{
   color: #7525A7;
-  font-size: 28px; /* Tamaño grande para el precio */
+  font-size: 22px; /* Tamaño grande para el precio */
   font-weight: 700; /* Fuente en negrita */
-  margin-top: 10px; /* Espacio por encima del precio */
+  margin: 0; /* Espacio por encima del precio */
+}
+.checkout-container .price-normal{
+  font-size: 15px;
+  text-decoration: line-through;
+  color: gray;
+  font-weight: 500;
+
 }
 .checkout-description{
   color: #333;
