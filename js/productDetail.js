@@ -67,11 +67,11 @@ function printDetails(id){
             </ul>
             <div class="checkout-process">
                 <div class="top">
-                    <input type="number" value="1" onchange="subTotal(event)">
+                    <input id="quantity-1" type="number" value="1" onchange="subTotal(event)">
                     <button class="btn-primary">Comprar</button>
                 </div>
                 <div class="bottom">
-                    <button class="btn-outline">Añadir al Carrito</button>
+                    <button class="btn-outline" onclick="saveProduct(${product.id})">Añadir al Carrito</button>
                 </div>
             </div>
         </div>  
@@ -81,24 +81,62 @@ function printDetails(id){
     const detailsSelector = document.querySelector("#productDetail")
     detailsSelector.innerHTML = detailsTemplate
 }
+printDetails(id)
 // función click para cambiar de imagen
 function changeMini(event){
     const selectedSrc = event.target.src
     const bigSelector = document.querySelector("#big-img")
     bigSelector.src = selectedSrc
 }
-// Calcular Subtotal a pagar
+//  Actividad: Calcular el subtotal a pagar
+// función para cambiar precio // viene del atributo onchange en el input
 function subTotal(event){
+    // traer la cantidad del input en tipo number
     const cantidadDefinida = event.target.value;
-    const priceNormalElement = document.querySelector("#price-nor");
-    const priceNormalValue = parseFloat(priceNormalElement.dataset.value)
-    const subTotal = cantidadDefinida * priceNormalValue
-    priceNormalElement.textContent = formatPrice(subTotal)
+    // traer el producto
+    const product = products.find(each => each.id == id)
+    // traer el selector de precio
+    const priceNormalSelector = document.querySelector("#price-nor")
+    // multiplicar la cantidad de productos por el precio
+    const subTotalNor = cantidadDefinida * product.normalPrice
+    priceNormalSelector.innerHTML = formatPrice(subTotalNor)
 
-    const priceDiscountElement = document.querySelector("#price-des")
-    const priceDiscountValue = parseFloat(priceDiscountElement.dataset.value)
-    const subTotalDes = cantidadDefinida * priceDiscountValue
-    priceDiscountElement.textContent = formatPrice(subTotalDes)
+    // traer el selector de precio
+    const priceSelector = document.querySelector("#price-des")
+    // multiplicar la cantidad de productos por el precio 
+    const subTotalDes = cantidadDefinida * product.priceWithDiscount
+    // cambiar el precio total y formateo
+    priceSelector.innerHTML = formatPrice(subTotalDes)
 }
-
-printDetails(id)
+// función click "añadir carrito" localStorage // viene del atributo onclick en el button añadir carrito
+// función que dependa del id del botón
+function saveProduct(id){
+    // busque el producto con el id
+    const product = products.find(product => product.id == id)
+    // calcular el precio total de acuerdo a la cantidad insertada en el input
+    const quantity = document.querySelector("#quantity-1").value
+    const subTotal = quantity * product.priceWithDiscount;
+    // objeto con las propiedades especificas de la compra
+    const objectProduct = {
+        id: product.id,
+        title: product.title,
+        photo: product.photo[0],
+        price: product.priceWithDiscount,
+        subTotal: subTotal,
+        colors: document.querySelector("#color").value,
+        quantity: document.querySelector("#quantity-1").value,
+    };
+    // verifica si la clave 'card' existe en el localStorage
+    if(localStorage.getItem('cart')){
+        // si existe, obtener el contenido y convertirlo en un nuevo array
+        let cart = JSON.parse(localStorage.getItem('cart'))
+        // agregar el nuevo producto al array
+        cart.push(objectProduct)
+        // guarda el array actualizado en el storage
+        localStorage.setItem('cart', JSON.stringify(cart))
+    } else {
+        // si no existe crear un nuevo array con el producto y guardarlo en el storage
+        let cart = [objectProduct]
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
+}

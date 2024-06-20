@@ -5,7 +5,7 @@ body, html{
 /*Encabezado*/
 header{
   padding-top: 30px;
-  background-color: purple;
+  background-color: teal;
   height: auto;
 }
 .menu{
@@ -41,6 +41,12 @@ header{
 .menu .social ul li {
   padding: 0 10px;
 }
+.menu .social ul li a i{
+  color: white;
+  font-size: 20px;
+  align-self: center;
+  /* font-weight: normal; */
+}
 #navbar{
   display: flex;
   justify-content: space-around;
@@ -58,7 +64,7 @@ section{
   height: 340px;
 }
 #hero{
-  background:url(../assets/hero_bg.png);
+  background:url(../assets/gato.jpg);
   background-size: cover;
   background-position: top center;
 }
@@ -162,15 +168,15 @@ main{
   font-weight: bold;
 }
 .product-discount{
-  font-size: 15px;
-  background-color: #4054ad;
+  font-size: 12px;
+  background-color: teal;
   height: 25px;
   width: 50px;
   position: absolute;
   border-radius: 3px 0px 3px 3px;
   text-align: center;
   line-height: 27px;
-  color: #ffffff;
+  color: white;
   top: 0;
   right: 0;
 }
@@ -181,7 +187,7 @@ main{
 }
 /* FOOTER */
 footer{
-  background-color: #7525A7;
+  background-color: teal;
 }
 footer .container{
   display: flex;
@@ -213,7 +219,7 @@ footer .footer-container{
   font-size: 12px;
 }
 .copyright {
-  border-top: 1px solid #ba53fb;
+  border-top: 1px solid rgb(70, 179, 179);
   text-align: center;
   color: white;
   font-weight: bold;
@@ -224,6 +230,9 @@ footer .footer-container{
 @media (max-width: 768px){
   .menu .logo img{
     width: 160px;
+  }
+  .menu .social ul li {
+    padding: 0 5px;
   }
   #search{
     width: 280px;
@@ -244,6 +253,12 @@ footer .footer-container{
   }
   .menu .logo img{
     width: 150px;
+  }
+  .menu .social ul li {
+    padding: 0 5px;
+  }
+  .menu .social .social-icon{
+    display: none;
   }
   #search{
     width: 100px;

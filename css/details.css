@@ -5,7 +5,7 @@ body, html{
 /*Encabezado*/
 header{
   padding-top: 30px;
-  background-color: purple;
+  background-color: teal;
   height: auto;
 }
 .menu{
@@ -41,6 +41,12 @@ header{
 }
 .menu .social ul li {
   padding: 0 10px;
+}
+.menu .social ul li a i{
+  color: white;
+  font-size: 20px;
+  align-self: center;
+  /* font-weight: normal; */
 }
 #navbar{
   display: flex;
@@ -184,7 +190,7 @@ main .columns-container{
 }
 .checkout-total-label{
   font-weight: 700;
-  color: #7525A7;
+  color: teal;
   font-size: 14px;
 }
 /*PRECIOS*/
@@ -195,7 +201,7 @@ main .columns-container{
   flex-direction: column;
 }
 .checkout-total-price{
-  color: #7525A7;
+  color: teal;
   font-size: 22px; /* Tamaño grande para el precio */
   font-weight: 700; /* Fuente en negrita */
   margin: 0; /* Espacio por encima del precio */
@@ -236,7 +242,7 @@ main .columns-container{
   width: 62px;
   border-radius: 5px;
   border: none;
-  color: #7525A7;
+  color: teal;
   margin-right:10px ;
   padding: 0 10px 0 20px;
   box-sizing: border-box;
@@ -247,17 +253,17 @@ main .columns-container{
   font-weight: bold;
   border-radius: 10px;
   border: none;
-  background-color: #7525A7;
+  background-color: teal;
   color: white;
 }
 .btn-outline{
   height: 40px;
   width: 100%;
-  border: 1px solid #7525A7;
+  border: 1px solid teal;
   border-radius: 10px;
   font-weight: 700;
   background-color: white;
-  color: #7525A7;
+  color: teal;
 }
 /* PRODUCTOS */
 .sales-block{
@@ -350,7 +356,7 @@ main .columns-container{
 }
 /* FOOTER */
 footer{
-  background-color: #7525A7;
+  background-color: teal;
 }
 footer .container{
   display: flex;
@@ -382,7 +388,7 @@ footer .footer-container{
   font-size: 12px;
 }
 .copyright {
-  border-top: 1px solid #ba53fb;
+  border-top: 1px solid rgb(70, 179, 179);
   text-align: center;
   color: white;
   font-weight: bold;
@@ -397,6 +403,9 @@ footer .footer-container{
   }
   .menu .logo img{
     width: 162px;
+  }
+  .menu .social ul li {
+    padding: 0 5px;
   }
   .menu .form input{
     width: 200px;
@@ -427,6 +436,9 @@ footer .footer-container{
   }
   .menu .logo img{
     width: 150px;
+  }
+  .menu .social .social-icon{
+    display: none;
   }
   .menu .form input{
     width: 100px;
